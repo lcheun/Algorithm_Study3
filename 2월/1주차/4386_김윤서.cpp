@@ -5,8 +5,8 @@
 #define ll long long
 using namespace std;
 
-typedef pair<double, double> p;
-bool cmp(pair<double, p > a, pair<double, p>  b) {
+typedef pair<double, double> pos;
+bool cmp(pair<double, pos> a, pair<double, pos>  b) {
 	return a.first < b.first;
 }
 struct DisjointSet {
@@ -31,10 +31,10 @@ struct DisjointSet {
 };
 
 int N; 
-p cord[MAX];
+pos cord[MAX];
 // cost, node, node
-vector<pair<double, p>> vc;
-double dist(p a, p b) {
+vector<pair<double, pos>> vc;
+double dist(pos a, pos b) {
 	return sqrt((a.first - b.first) * (a.first - b.first) + (a.second - b.second) * (a.second - b.second));
 }
 
